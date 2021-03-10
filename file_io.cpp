@@ -6,7 +6,7 @@ using namespace std;
 //read from file
 void read_file(){
     ifstream f("file.txt");
-
+    //TODO: what os f.open() calls used sometimes
     char buf[20];
     // f.read(buf, 20);
     f >> buf;   //TODO: this seems to read till first white space huh
