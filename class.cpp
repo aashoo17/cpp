@@ -2,6 +2,23 @@
 
 using namespace std;
 
+/*
+class:
+this
+const in member function
+define member function outside the class
+constructor:
+= default
+copy, assignment, destructor explanation with example
+access control - public, private
+class and struct differences
+overload member functions
+mutable data member
+delegating constructor
+implicit class type conversion - suppress it using explicit keyword
+static members
+*/
+
 class Human{
     string name;
     int age;
