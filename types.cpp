@@ -4,6 +4,12 @@
 using namespace std;
 /*
 what are the sizes of char,short,int, long,long long types
+char - 1 byte
+short - 2 byte min
+int - 2 byte min
+long - 4 byte min
+long long - 8 byte min
+
 implicit type conversions
 integer overflow
 use of L, UL, LL, ULL type
@@ -13,6 +19,7 @@ how string and vector works
 
 int main(){
     //integers
+    unsigned char a_ = 10;
     short a = 10;
     int b = 10;
     //TODO: why L, LL, UL, ULL ? what will happen if we don't put it
@@ -25,7 +32,7 @@ int main(){
     unsigned long long d1 = 10ULL;
 
     //floats
-    float e = 10.0f;
+    float e = 10.0F;
     double f = 10.0;
     //char
     char g = 'A';

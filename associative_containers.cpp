@@ -43,6 +43,7 @@ void map_(){
 
     //insert/remove
     //TODO: emplace vs insert. difference ?
+    //TODO: pair cleanup ?
     a.insert(pair<int,int>(1,10));
     a.insert(make_pair(2, 20));
     a.emplace(make_pair(3,30));

@@ -26,7 +26,7 @@ void algorithms(){
     //TODO: if element was not found where iterator will point - i.e. how will i know element was not found
     //search 1 element
     auto find_itr = find(cbegin,cend,1000); 
-    auto find_itr2 = find_if(cbegin,cend,[](int a){return a == 10;});    //takes unary predicate
+    auto find_itr2 = find_if(cbegin,cend,[=](int a){return a == 10;});    //takes unary predicate
     //search for range of elements
     auto search_itr = search(cbegin,cend,b.cbegin(),b.cend());
 
@@ -42,7 +42,7 @@ void algorithms(){
     //replace(begin, end, old_value, new_value);
     replace(c.begin(), c.end(), 70, 7000);
     //replace_if(begin, end, predicate, new_value);
-    replace_if(c.begin(), c.end(), [](int a){return a < 50;}, 7000);
+    replace_if(c.begin(), c.end(), [=](int a){return a < 50;}, 7000);
 
     //remove elements
     // remove(begin, end, value);
@@ -54,10 +54,10 @@ void algorithms(){
 
     //partition
     //partition (begin, end, predicate);
-    partition(c.begin(), c.end(), [](int a){return a < 100;});
+    partition(c.begin(), c.end(), [=](int a){return a < 100;});
 
     //sort
-    sort(a.begin(),a.end(),[](int a, int b){return a < b;});    //order may be chabged for same values
+    sort(a.begin(),a.end(),[=](int a, int b){return a < b;});    //order may be chabged for same values
     //stable_sort() is similar but if two elements are same it will ensure that order is not changed
 
     //binary search
@@ -67,18 +67,21 @@ void algorithms(){
     // merge(a.cbegin(),a.cend(),b.cbegin(),b.cend(),c.begin());
 
     //binary heap
-    // make_heap(a.begin(),a.end());
-    // push_heap(a.begin(),a.end(),200);
-    // pop_heap(a.begin(),a.end(),200);
-    // sort_heap(a.begin(),a.end());
+    // make_heap(c.begin(),c.end());
+    // push_heap(c.begin(),c.end(),200);
+    // pop_heap(c.begin(),c.end(),200);
+    // sort_heap(c.begin(),c.end());
+    // for (auto i : c){
+    //     cout << i << " ";
+    // }
     
     //fill ranges
     fill(c.begin(),c.end(),10);
     fill_n(c.begin(),5,20);
     //use this to print iterator for checking values
-    for (auto i : c){
-        cout << i << " ";
-    }
+    // for (auto i : c){
+    //     cout << i << " ";
+    // }
     cout << endl;
 }
 

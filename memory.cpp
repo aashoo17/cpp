@@ -23,8 +23,8 @@ void new_and_delete(){
 void shared_pointer_(){
     //creation
     shared_ptr<int> a = make_shared<int>(10);   //make_shared() ensure 10 is heap allocated
-    shared_ptr<int> b(new int(10));   //explicitly passing heap allocated value
-    //where does c points right now
+    shared_ptr<int> b(new int(10));   //explicitly passing heap allocated value, shared ptr will do cleanup so delete call is not required if done double free will happen
+    //TODO: where does c points right now
     shared_ptr<int> c;
 
     //get the shared pointer which shares the memory
@@ -40,7 +40,7 @@ void shared_pointer_(){
 
     cout << *b << endl;
 
-    //shared_ptr gets deleted here automatically i.e. memeory is freed
+    //shared_ptr gets deleted here automatically i.e. memeory is freed when variable scope has expired
 }
 
 //weak pointer
@@ -53,6 +53,7 @@ void weak_pointers_(){
     //TODO: check how many weak count to any variable exists
 
     //check if weak_ptr is valid
+    //TODO: how to handle the failure of lock() call - try/catch ?
     shared_ptr<int> c = b.lock();
 
     //if valid modify underlying value
@@ -64,6 +65,8 @@ void weak_pointers_(){
 void unique_pointers_(){
     unique_ptr<int> a = make_unique<int>(10);   //get unique_ptr to heap memory 10
     //no body can use that memory until unique_ptr have it
+
+    //TODO: doing modification on underlying value
 
     //memory gets freed here
 }

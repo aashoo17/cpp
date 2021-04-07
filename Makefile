@@ -3,5 +3,5 @@ all:main
 	./main
 	rm main
 
-main: memory.cpp
+main: template.cpp
 	g++ -o $@ $?

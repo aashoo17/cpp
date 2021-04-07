@@ -50,6 +50,7 @@ void vector_(){
 
     //add/remove elements
     a.push_back(60);
+    //[emplace vs insert stackoverflow](https://stackoverflow.com/questions/14788261/c-stdvector-emplace-vs-insert)
     a.insert(a.cbegin() + 4,70);    //get iterator for 1st position then add 4 to get 5th position
     a.emplace(a.cend(), 100);       //TODO: differnce between insert and emplace
     a.erase(a.begin());     //TODO: a.end() in erase fails
@@ -59,7 +60,7 @@ void vector_(){
 
     //iterator - normal iterator and const_iterator
     //const_iterator will not allow modifications
-    vector<int>::iterator begin = a.begin();
+    vector<int>::iterator begin = a.begin();    //auto can be used but I have omitted to see how writing actual type looks like
     vector<int>::iterator end = a.end();
 
     //modify all elements using iterator
