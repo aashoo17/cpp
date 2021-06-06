@@ -23,34 +23,65 @@ class Human{
     string name;
     int age;
     public:
-    //constructor
-    //if any constructor manually created, default constructor no longer available using = default we can ask compiler to give default constructor
-    Human() = default; 
+    /*
+    constructor:
+    = default
+    delegating constructor
+    explicit constructor
+    */
+    Human() = default;  //says to invoke default constructor as they are not available once any constructor is written manually 
     Human(string name,int age){
         this->name = name;
         this->age = age;
     }
-    //make explicit so than Human can't be written like this
-    //Human h = "Some name";    //not possible
-    //Human h("Some name");  this is possible
-    explicit Human(string name): Human(name,10){
-        
-    } 
+    //delegating constructor
+    Human(string name):Human(name,10){
 
+    }
+    /*
+    make explicit so than Human can't be written like this
+    Human h = "Some name";    //not possible
+    Human h("Some name");  this is possible
+    */
+    explicit Human(int age){
+        
+    }
+    /*
+    methods:
+    these are functions explicitly passed instance of the class using this
+    this can be thought of => Human* const this
+    */
     void func(){
         //here this is implicit
         //this => Human* const this 
         //that means this can't be reassigned but can be modified
+        this->age = 10;
+        //invoke another method
+        this->const_func();
+        //usually this can be omitted
+        const_func();
+        age = 20;
     }
 
+    //overloading method func()
+    void func(int a){
+
+    }
+    /*
+    const member functions:
+    methods which will not be able to modify class instance
+    */
     void const_func() const{
         //here this => const Human* const this
         //this can't be modified and reassigned
+        cout << this->name << endl;
     }
-    //this not available
-    //called as Human::static_func()
+    /*
+    static methods:
+    this is not available
+    called as Human::static_func()
+    */
     static void static_func(){
         
-    }
-
+    } 
 };
