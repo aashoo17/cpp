@@ -18,8 +18,9 @@ template<typename T> class Human{
 
 int main(){
     //using function template
-    my_func(10);    //in function args are templated so when we pass the parameter T can be auto deduced and not required to type explicitly
-
+    //in function args are templated so when we pass the parameter T can be auto deduced and not required to 
+    //type explicitly
+    my_func(10);    
     //using class template
     Human<int> h;   //in class generally explicit type of T will be required to give
     h.say_name(20);

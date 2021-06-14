@@ -20,7 +20,7 @@ void new_and_delete(){
 }
 
 //shared pointer
-void shared_pointer_(){
+void shared_pointer(){
     //creation
     shared_ptr<int> a = make_shared<int>(10);   //make_shared() ensure 10 is heap allocated
     shared_ptr<int> b(new int(10));   //explicitly passing heap allocated value, shared ptr will do cleanup so delete call is not required if done double free will happen
@@ -44,7 +44,7 @@ void shared_pointer_(){
 }
 
 //weak pointer
-void weak_pointers_(){
+void weak_pointer(){
     //create a shared pointer
     shared_ptr<int> a = make_shared<int>(10);
     //create weak_ptr
@@ -62,7 +62,7 @@ void weak_pointers_(){
 }
 
 //unique pointers
-void unique_pointers_(){
+void unique_pointer(){
     unique_ptr<int> a = make_unique<int>(10);   //get unique_ptr to heap memory 10
     //no body can use that memory until unique_ptr have it
 
@@ -72,5 +72,5 @@ void unique_pointers_(){
 }
 
 int main(){
-    weak_pointers_();
+    weak_pointer();
 }

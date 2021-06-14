@@ -4,7 +4,8 @@
 
 using namespace std;
 
-void create_Vector(){
+void create_vector(){
+    //vector creation 
     vector<int> a = {10,20,30,40,50};
     vector<int> b;
     vector<int> c(a);
@@ -12,22 +13,22 @@ void create_Vector(){
     vector<int> e{10,20,30,40,50};
     vector<int> f(0,10);
 
-    //show any one 
-    for (auto i : f){
+    //iterate over all elements to print
+    for (auto i : a){
         cout << i << " ";
     }
     cout << endl;
 }
 
-void operations_Vector(){
+void operations_vector(){
     vector<int> a = {10,20,30,40,50};
 
     //add elements
     a.push_back(60);
     //size
     a.size();
-    //check empty
-    assert(a.empty() != 0);
+    //check if empty
+    assert(a.empty() != true); //TODO: check why this is failing
 
     //indexing
     int b = a[0];
@@ -41,5 +42,5 @@ void operations_Vector(){
 }
 
 int main(){
-    create_Vector();
+    operations_vector();
 }

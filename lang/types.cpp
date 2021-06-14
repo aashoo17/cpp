@@ -1,5 +1,4 @@
-#include <string>
-#include <vector>
+#include <iostream>
 
 using namespace std;
 /*
@@ -17,35 +16,51 @@ float over and under flow
 how string and vector works
 */
 
+void integer(){
+    //signed integers
+    signed char a = 10;
+    short b = 10;
+    int c = 10;
+    long d = 10L;
+    long long e = 10LL;
+
+    //unsigned char
+    unsigned char f = 10;
+    unsigned short g = 10;
+    unsigned int h = 10;
+    unsigned long i = 10UL;
+    unsigned long long j = 10ULL;
+}
+
+//so in cpp we don't have to bring fixed type through any header file
+void fixed_integers(){
+    //signed 
+    int8_t a = 10;
+    int16_t b = 10;
+    int32_t c = 10;
+    int64_t d = 10;
+
+    //unsigned
+    uint8_t e = 10;
+    uint16_t f = 10;
+    uint32_t g = 10;
+    uint64_t h = 10;
+
+    uintptr_t i = 10;
+}
+
+//char 
+void chars(){
+    char a = 'A';
+    char b = '\0';
+}
+
+//boolean
+void boolean(){
+    bool a = true;
+    bool b = false;
+}
+
 int main(){
-    //integers
-    unsigned char a_ = 10;
-    short a = 10;
-    int b = 10;
-    //TODO: why L, LL, UL, ULL ? what will happen if we don't put it
-    long c = 10L;
-    long long d = 10LL;
-
-    unsigned short a1 = 10;
-    unsigned int b1 = 10;
-    unsigned long c1 = 10UL;
-    unsigned long long d1 = 10ULL;
-
-    //floats
-    float e = 10.0F;
-    double f = 10.0;
-    //char
-    char g = 'A';
-    signed char h = 10;
-    unsigned char i = 10;   //this is used as byte in cpp
-
-    //bool
-    bool j = true;
-    //string
-    string k = "Hello";
-    //vector
-    vector<int> l = {10,20,30,40,50};
-
-    //using const
-    const int m = 10;   //const can't be modified
+    fixed_integers();
 }

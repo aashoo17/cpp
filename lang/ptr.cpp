@@ -37,8 +37,10 @@ int main(){
     int d = 10;
 
     //int& - says reference to int
+    //you can think that instead of &d from d created implicitly
     int& e = d;
-    e = 20;     //modify underlying value - but operation just looks like as on int
+    //modify underlying value - *e is being called implictly
+    e = 20;     
 
     //refernces in functions
     ref_func(e);    //just like pointer refs can modify the values when passed in function

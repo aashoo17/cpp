@@ -19,7 +19,7 @@ multimap can have same key more than once
 */
 
 //pair api
-//as this will be commonaly used in map
+//as pairs will be commonaly used in map
 void pair_(){
     //creating pair
     pair<int,int> a;

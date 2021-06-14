@@ -20,17 +20,21 @@ static members
 */
 
 class Human{
+    //private properties
     string name;
     int age;
-    public:
+    
     /*
     constructor:
     = default
     delegating constructor
     explicit constructor
     */
-    Human() = default;  //says to invoke default constructor as they are not available once any constructor is written manually 
+    public:
+    //says to invoke default constructor as they are not available once any constructor is written manually 
+    Human() = default;  
     Human(string name,int age){
+        //this => Human* const this
         this->name = name;
         this->age = age;
     }
@@ -51,10 +55,10 @@ class Human{
     these are functions explicitly passed instance of the class using this
     this can be thought of => Human* const this
     */
-    void func(){
+    void member_func(){
         //here this is implicit
         //this => Human* const this 
-        //that means this can't be reassigned but can be modified
+        //that means this can't be reassigned but can modify class instance
         this->age = 10;
         //invoke another method
         this->const_func();
@@ -64,7 +68,7 @@ class Human{
     }
 
     //overloading method func()
-    void func(int a){
+    void member_func(int a){
 
     }
     /*
@@ -74,6 +78,7 @@ class Human{
     void const_func() const{
         //here this => const Human* const this
         //this can't be modified and reassigned
+        //this->name = "Some Name"; is not possible to do
         cout << this->name << endl;
     }
     /*
@@ -84,4 +89,9 @@ class Human{
     static void static_func(){
         
     } 
+
+    //destructor
+    ~Human(){
+        //run memory cleanup routines - usually heap allocated memory
+    }
 };

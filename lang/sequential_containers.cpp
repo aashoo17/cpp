@@ -60,7 +60,8 @@ void vector_(){
 
     //iterator - normal iterator and const_iterator
     //const_iterator will not allow modifications
-    vector<int>::iterator begin = a.begin();    //auto can be used but I have omitted to see how writing actual type looks like
+    //auto can be used but I have omitted to see how writing actual type looks like
+    vector<int>::iterator begin = a.begin();    
     vector<int>::iterator end = a.end();
 
     //modify all elements using iterator

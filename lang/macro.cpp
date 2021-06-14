@@ -52,8 +52,7 @@ this includes all the contents of a file in the file #include is declared
 #endif
 
 //a struct whose one field is optional and appears only when this macro MACRO_IS_DEFINED is defined
-struct Human
-{
+struct Human{
     int a;
     int b;
     #ifdef MACRO_IS_DEFINED
@@ -98,12 +97,10 @@ __STDC_VERSION__
 __TIME__
 */
 
-void predefined_macros()
-{
+void predefined_macros(){
     cout <<  __DATE__ __FILE__ << __STDC__ << endl;
 }
 
-int main()
-{
+int main(){
     predefined_macros();
 }

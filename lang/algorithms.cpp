@@ -8,7 +8,7 @@ using namespace std;
 //using the following link for basic algorithms uses
 //[stl algorithms](https://www.cs.helsinki.fi/u/tpkarkka/alglib/k06/lectures/algorithms.html)
 void algorithms(){
-    //taking vector as sample here but can be used on any other sequential containers
+    //taking vector as sample here but can be used on any other sequential containers - deque, list etc
     vector<int> a{100,40,30,20,50,10,90,60,80,70};
     vector<int> b{20,50,10};    //this will be used to provide range of value when algorithms required
     vector<int> c{100,40,30,20,50,10,90,60,80,70};  //use this if write is required and don't want to change vector a

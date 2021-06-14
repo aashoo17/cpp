@@ -24,7 +24,7 @@ void write_file(){
     f.close();
 }
 
-//read and write both
+//open for read and write both
 void read_write_file(){
     fstream f("file.txt");
     f << "Hello World from Ashu";
