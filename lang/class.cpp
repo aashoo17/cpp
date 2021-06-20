@@ -93,5 +93,32 @@ class Human{
     //destructor
     ~Human(){
         //run memory cleanup routines - usually heap allocated memory
+
+        //though we can execute normal code also destructor was suposed to be created for memory cleanup
+        cout << "cleanup is done here" << endl;
     }
 };
+
+
+int main(){
+    //allocate on stack
+    Human a;
+    Human b("Some name",10);
+
+    a.member_func();
+    b.const_func();
+
+    //allocate on heap
+    Human c = new Human();
+    Human d = new Human("some name",10);
+
+    c->const_func();
+    d->member_func();
+
+    //cleanup heap
+    delete c;
+    delete d;
+
+    //static function call
+    Human::static_func();
+}

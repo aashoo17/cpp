@@ -4,4 +4,4 @@ all:main
 	rm main
 
 main:time.cpp
-	$(CXX) -o main $<
+	$(CXX) -o main $< --std=c++20
