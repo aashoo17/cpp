@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>
+#include <ratio>
 
 /*
 how things works in chrono
@@ -24,20 +25,23 @@ using namespace std;
 
 //duration - measuring seconds, milliseconds etc
 void duration(){
-	//so seconds and milliseconds here must be typedef for duration
+	//so seconds and milliseconds here are typedef for duration
 	//second
 	chrono::seconds a(1);
 	//millisecond
 	chrono::milliseconds b(1);
 	//general duration
 	//template args - std::chrono::duration<Rep,Period> - what is Rep and Period
-	//Rep will take any of types like - int, float, double which decides returned time to be stored in type
-	//Period - this uses kilo, milli, micro, nano etc which we know by convention 
-	//say second is base for 1 => kilo - 1000 sec, milli - .001 sec, micro - 10^-6 sec, nano - 10^-9 sec etc
-	chrono::duration<int,kilo> c(3);	//this creates 3000 secs representation
-	chrono::duration<double,nano> d(3);		//3 nano second
-	//TODO: printing duration
-	//TODO: getting a value in second as number (in form of int, double) say 1000 sec, 30 sec etc
+	//Rep will take any of types like - int, float, double which decides duration to be stored in
+	//Period - this uses std::ratio()
+	//std::ratio() special typedef cases - kilo - 1000, milli - .001, micro - 10^-6 sec, nano - 10^-9 sec etc
+	std::chrono::duration<int> twentySeconds(20);
+	std::chrono::duration<double,std::ratio<60>> halfAMinute(0.5);			// 60/1
+	std::chrono::duration<long,std::ratio<1,1000>> oneMillisecond(1);		// 1/1000
+	std::chrono::duration<long,milli> oneMillisecond_1(1);		//	1/1000
+	//printing
+	//TODO: how can we always print in terms of second
+	cout << halfAMinute.count() << endl;
 }
 
 //time point - clocks will return time_point so we have to know how can we work on top of it
@@ -45,9 +49,7 @@ void time_pt(){
 	chrono::time_point<chrono::system_clock> tp1;	//for system clock
 	chrono::time_point<chrono::steady_clock> tp2;	//for monotonic clock
 
-	auto a = tp1.time_since_epoch();
-	// cout << a << endl;
-	//TODO: printing duration
+	cout << tp1.time_since_epoch().count() << endl;
 }
 
 // wall clock/calendar time - called as system_clock in cpp
@@ -65,5 +67,5 @@ void elapsed_time(){
 }
 
 int main(){
-
+	time_pt();
 }	
