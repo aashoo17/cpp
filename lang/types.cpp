@@ -49,13 +49,18 @@ void fixed_integers(){
     uintptr_t i = 10;
 }
 
+void floats(){
+    float a = 10;
+    double b = 10;
+}
+
 //char 
 void chars(){
     char a = 'A';
     char b = '\0';
 }
 
-//boolean
+//boolean - no header file required unlike in c
 void boolean(){
     bool a = true;
     bool b = false;

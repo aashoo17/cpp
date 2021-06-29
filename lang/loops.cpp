@@ -2,21 +2,19 @@
 
 using namespace std;
 
-void loops(){
-	int i = 0;
-	// while loop
-	while(++i < 10)
-		cout << i << " ";
+void loops() {
+  int i = 0;
+  // while loop
+  while (++i < 10)
+    cout << i << " ";
 
-	cout << endl;
+  cout << endl;
 
-	int j = 0;
-	for (int j = 0; j < 10; ++j)
-		cout << j << " ";
+  int j = 0;
+  for (int j = 0; j < 10; ++j)
+    cout << j << " ";
 
-	cout << endl;
+  cout << endl;
 }
 
-int main(){
-	loops();
-}
+int main() { loops(); }

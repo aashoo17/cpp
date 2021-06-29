@@ -14,7 +14,7 @@ void create_vector(){
     vector<int> f(0,10);
 
     //iterate over all elements to print
-    for (auto i : a){
+    for (int i : a){
         cout << i << " ";
     }
     cout << endl;
@@ -28,7 +28,7 @@ void operations_vector(){
     //size
     a.size();
     //check if empty
-    assert(a.empty() != true); //TODO: check why this is failing
+    assert(a.empty() == 0); 
 
     //indexing
     int b = a[0];
@@ -38,7 +38,7 @@ void operations_vector(){
     vector<int> c;
     c = a;
     //comparison ==, !=
-    assert(c != a);
+    assert(c == a);
 }
 
 int main(){

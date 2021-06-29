@@ -3,5 +3,5 @@ all:main
 	./main
 	rm main
 
-main: loops.cpp
+main: vector.cpp
 	g++ -o $@ $<

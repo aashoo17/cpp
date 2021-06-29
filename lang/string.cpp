@@ -1,6 +1,6 @@
-#include <string>
 #include <cassert>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -20,40 +20,38 @@ for 1 string is run other do not point to deallocated heap memory
 this is some times called as deep copy
 */
 
-void create_string(){
-    //ways to create string
-    string a = "Hello";     
-    string b;   
-    string c("Hello");  
-    string d('a',10); 
+void create_string() {
+  // ways to create string
+  string a = "Hello";
+  string b;
+  string c("Hello");
+  string d('a', 10);
 }
 
-void operations_string(){
-    //operations on string
-    string a = "Hello World";
-    //size
-    size_t b = a.size();
-    //indexing
-    a[5] = 'A';
-    char c = a[1];
+void operations_string() {
+  // operations on string
+  string a = "Hello World";
+  // size
+  size_t b = a.size();
+  // indexing
+  a[5] = 'A';
+  char c = a[1];
 
-    //concatenate
-    string d = "World";
-    string e = "Hello ";
-    string f;
-    f = e + d;
-    //assignment = this copies the string to assigned string
+  // concatenate
+  string d = "World";
+  string e = "Hello ";
+  string f;
+  f = e + d;
+  // assignment = this copies the string to assigned string
 
-    //comparison operators == , !=
-    string g = "Hello";
-    string h = "World";
-    assert(g != h);
-    assert(g == g);
+  // comparison operators == , !=
+  string g = "Hello";
+  string h = "World";
+  assert(g != h);
+  assert(g == g);
 
-    //printing string
-    cout << g << endl;
+  // printing string
+  cout << g << endl;
 }
 
-int main(){
-      operations_string();
-}
+int main() { operations_string(); }

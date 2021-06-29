@@ -109,8 +109,8 @@ int main(){
     b.const_func();
 
     //allocate on heap
-    Human c = new Human();
-    Human d = new Human("some name",10);
+    Human* c = new Human();
+    Human* d = new Human("some name",10);
 
     c->const_func();
     d->member_func();
