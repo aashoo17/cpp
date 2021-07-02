@@ -43,7 +43,7 @@ void vector_() {
   // sequential type also
   vector<int> a{
       10, 20, 30, 40,
-      50}; // list initaializer will be the most common ways of initializing it
+      50}; // list initializer will be the most common ways of initializing it
 
   // assignment
   vector<int> b;

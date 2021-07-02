@@ -44,7 +44,7 @@ void shared_pointer() {
 
   cout << *b << endl;
 
-  // shared_ptr gets deleted here automatically i.e. memeory is freed when
+  // shared_ptr gets deleted here automatically i.e. memory is freed when
   // variable scope has expired
 }
 

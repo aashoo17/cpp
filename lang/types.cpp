@@ -16,7 +16,7 @@ float over and under flow
 how string and vector works
 */
 
-void integer(){
+void integers(){
     //signed integers
     signed char a = 10;
     short b = 10;

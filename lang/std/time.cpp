@@ -38,7 +38,7 @@ void duration() {
   // template args - std::chrono::duration<Rep,Period> - what is Rep and Period
   // Rep will take any of types like - int, float, double which decides duration
   // to be stored in Period - this uses std::ratio() which describes
-  // multiplication with second std::ratio() special typedef cases - kilo - 1000,
+  // multiplication factor with second std::ratio() special typedef cases - kilo - 1000,
   // milli - 1/1000, micro - 10^-6 sec, nano - 10^-9 sec etc
   std::chrono::duration<int> twentySeconds(20);
   std::chrono::duration<double, std::ratio<60>> halfAMinute(0.5);     // 60/1
@@ -49,7 +49,7 @@ void duration() {
   cout << halfAMinute.count() << endl;
 
   // duration operation
-  auto c = halfAMinute - twentySeconds; // difference
+  chrono::duration<double> c = halfAMinute - twentySeconds; // difference
   cout << c.count() << endl;
 }
 

@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-  // array cretaion
+  // array creataion
   int a[] = {10, 20, 30, 40, 50};
   int b[10];
 
