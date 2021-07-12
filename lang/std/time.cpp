@@ -40,10 +40,10 @@ void duration() {
   // to be stored in Period - this uses std::ratio() which describes
   // multiplication factor with second std::ratio() special typedef cases - kilo - 1000,
   // milli - 1/1000, micro - 10^-6 sec, nano - 10^-9 sec etc
-  std::chrono::duration<int> twentySeconds(20);
-  std::chrono::duration<double, std::ratio<60>> halfAMinute(0.5);     // 60/1
-  std::chrono::duration<long, std::ratio<1, 1000>> oneMillisecond(1); // 1/1000
-  std::chrono::duration<long, milli> oneMillisecond_1(1);             //	1/1000
+  chrono::duration<int> twentySeconds(20);
+  chrono::duration<double, std::ratio<60>> halfAMinute(0.5);     // 60/1
+  chrono::duration<long, std::ratio<1, 1000>> oneMillisecond(1); // 1/1000
+  chrono::duration<long, milli> oneMillisecond_1(1);             //	1/1000
   // printing
   // TODO: how can we always print in terms of second
   cout << halfAMinute.count() << endl;

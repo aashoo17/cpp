@@ -7,12 +7,12 @@ one thing I know is const being variable can be scoped so same name const can be
 defined again in other scope #define is visible in entire file
 
 function like macro are replacement for functions as macros are inlined and if
-fuction call is made lot of time thet will have lot of overhead of calling
+fuction call is made lot of time that will have lot of overhead of calling
 function creating stack then freeing stack etc..(all the things of function) now
 we have inlined function also so are function like macros still useful
 
 #undef
-to undefine macrk use this
+to undefine macro use this
 if macro is required to give new value undefine and then use #define again
 */
 
@@ -55,7 +55,7 @@ struct Human {
   int a;
   int b;
 #ifdef MACRO_IS_DEFINED
-  char name[100]; // this field is avilable only when macro is defined
+  char name[100]; // this field is available only when macro is defined
 #endif
 };
 
