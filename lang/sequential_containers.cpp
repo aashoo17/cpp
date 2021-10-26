@@ -22,7 +22,7 @@ work on it
 2. assignment
 3. size of container
 4. add/remove elements
-5. comparison operators -
+5. comparison operators  
 6. iterators
 
 algorithms:
@@ -32,7 +32,6 @@ list....or other seq containers so any algorithm can be applied on these
 containers by getting iterator on them
 
 TODO: explain vector, deque & list and their differences
-
 */
 
 // vector
@@ -41,13 +40,11 @@ void vector_() {
   // create
   // for other way of creation see the vector.cpp file - same will work on other
   // sequential type also
-  vector<int> a{
-      10, 20, 30, 40,
-      50}; // list initializer will be the most common ways of initializing it
+  vector<int> a{10, 20, 30, 40,50}; // list initializer will be the most common ways of initializing it
 
   // assignment
   vector<int> b;
-  b = a; // assignment
+  b = a; // assignment makes deep copy
 
   // size
   assert(a.size() == 5);     // check size
@@ -57,9 +54,8 @@ void vector_() {
   a.push_back(60);
   //[emplace vs insert
   //stackoverflow](https://stackoverflow.com/questions/14788261/c-stdvector-emplace-vs-insert)
-  a.insert(a.cbegin() + 4,
-           70); // get iterator for 1st position then add 4 to get 5th position
-  a.emplace(a.cend(), 100); // TODO: differnce between insert and emplace
+  a.insert(a.cbegin() + 4, 70); // get iterator for 1st position then add 4 to get 5th position
+  a.emplace(a.cend(), 100); // TODO: difference between insert and emplace
   a.erase(a.begin());       // TODO: a.end() in erase fails
   // a.clear();  //remove all elements
 
@@ -94,9 +90,7 @@ void deque_() {
   // create
   // for other way of creation see the vector.cpp file - same will work on other
   // sequential type also
-  deque<int> a{
-      10, 20, 30, 40,
-      50}; // list initaializer will be the most common ways of initializing it
+  deque<int> a{10, 20, 30, 40, 50}; // list initializer will be the most common ways of initializing it
 
   // assignment
   deque<int> b;
@@ -109,9 +103,8 @@ void deque_() {
   // add/remove elements
   a.push_back(60);
   a.push_front(200); // add elements in front
-  a.insert(a.cbegin() + 4,
-           70); // get iterator for 1st position then add 4 to get 5th position
-  a.emplace(a.cend(), 100); // TODO: differnce between insert and emplace
+  a.insert(a.cbegin() + 4, 70); // get iterator for 1st position then add 4 to get 5th position
+  a.emplace(a.cend(), 100); // TODO: difference between insert and emplace
   a.erase(a.begin());       // TODO: a.end() in erase fails
   // a.clear();  //remove all elements
 
@@ -119,8 +112,7 @@ void deque_() {
 
   // iterator - normal iterator and const_iterator
   // const_iterator will not allow modifications
-  deque<int>::iterator begin =
-      a.begin(); // auto can be used but using big form for understanding only
+  deque<int>::iterator begin = a.begin(); // auto can be used but using big form for understanding only
   deque<int>::iterator end = a.end();
 
   // modify all elements using iterator

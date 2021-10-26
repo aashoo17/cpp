@@ -57,7 +57,8 @@ void floats(){
 //char 
 void chars(){
     char a = 'A';
-    char b = '\0';
+    char b = '\0';  //NULL byte
+    char c = '\n';  //multiple char used to represent one character
 }
 
 //boolean - no header file required unlike in c
